@@ -1,16 +1,12 @@
-import logo from "./logo.svg";
 import "./App.css";
 
-import { GreetingFunctional } from "./components/pure";
+import TaskListComponent from "./components/container/TaskListComponent";
 
 function App() {
 	return (
 		<div className="App">
 			<header className="App-header">
-				<img src={logo} className="App-logo" alt="logo" />
-				{/* Greeting */}
-				{/* <Greeting name="Tomas"></Greeting> */}
-				<GreetingFunctional name="Tom"></GreetingFunctional>
+				<TaskListComponent></TaskListComponent>
 			</header>
 		</div>
 	);
