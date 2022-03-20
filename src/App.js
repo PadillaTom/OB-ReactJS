@@ -1,7 +1,7 @@
 import logo from "./logo.svg";
 import "./App.css";
 
-import { Greeting, GreetingFunctional } from "./pure";
+import { GreetingFunctional } from "./components/pure";
 
 function App() {
 	return (
