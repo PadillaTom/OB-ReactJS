@@ -8,15 +8,15 @@ function App() {
 		<div className="App">
 			<header className="App-header">
 				{/* Task List */}
-				{/* <TaskListComponent></TaskListComponent> */}
+				<TaskListComponent></TaskListComponent>
 
 				{/* Ejemplo HOOKS  */}
 				{/* <Ejemplo1></Ejemplo1> */}
 				{/* <Ejemplo2></Ejemplo2> */}
 				{/* <MiComponenteConContexto></MiComponenteConContexto> */}
-				<Ejemplo4 name="Tomas">
+				{/* <Ejemplo4 name="Tomas">
 					<h3>Esto es un Children</h3>
-				</Ejemplo4>
+				</Ejemplo4> */}
 			</header>
 		</div>
 	);

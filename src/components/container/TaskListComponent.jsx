@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState, useEffect } from "react";
 
 import { Task } from "../../models/task.class";
 import { LEVELS } from "../../models/levels.enum";
@@ -13,12 +13,25 @@ const TaskListComponent = () => {
 		LEVELS.NORMAL
 	);
 
-    // Methods:
-    const changeState = (id)=> {
-        console.log();
-    }
+	// States:
+	const [tasks, setTasks] = useState([defaultTask]);
+	const [loading, setLoading] = useState(true);
 
-    // RENDER:
+	// Effect:
+	useEffect(() => {
+		console.log("Task State = Fue modificado.");
+		setLoading(false);
+		return () => {
+			console.log("TaskList (CLEANUP) =  Sera UNMOUNT");
+		};
+	}, [tasks]);
+
+	// Methods:
+	const changeCompleted = (id) => {
+		console.log();
+	};
+
+	// RENDER:
 	return (
 		<div>
 			<div>Your Tasks:</div>
