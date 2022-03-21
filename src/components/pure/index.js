@@ -1,3 +1,4 @@
 import Greeting from "./Greeting";
 import GreetingFunctional from "./GreetingFunctional";
-export { Greeting, GreetingFunctional };
+import GreetingStyled from "./GreetingStyled";
+export { Greeting, GreetingFunctional, GreetingStyled };
