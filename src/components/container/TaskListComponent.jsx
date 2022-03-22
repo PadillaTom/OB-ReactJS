@@ -30,8 +30,24 @@ const TaskListComponent = () => {
 	}, [tasks]);
 
 	// Methods:
-	const changeCompleted = (id) => {
-		console.log();
+	const completeTask = (myTask) => {
+		const index = tasks.indexOf(myTask); // 1) Find our Tasks by INDEX
+		const tempTasks = [...tasks]; // 2) Copy Array, Change COMPLETED of our found Task.
+		tempTasks[index].completed = !tempTasks[index].completed;
+		setTasks(tempTasks); // 3) SetTasks
+	};
+
+	const deleteTask = (myTask) => {
+		const index = tasks.indexOf(myTask);
+		const tempTasks = [...tasks];
+		tempTasks.splice(index, 1); // Delete found Task from Array.
+		setTasks(tempTasks);
+	};
+
+	const addTask = (myTask) => {
+		const tempTasks = [...tasks];
+		tempTasks.push(myTask);
+		setTasks(tempTasks);
 	};
 
 	// RENDER:
@@ -69,6 +85,8 @@ const TaskListComponent = () => {
 										<TaskComponent
 											key={index}
 											task={singleTask}
+											complete={completeTask}
+											remove={deleteTask}
 										></TaskComponent>
 									);
 								})}
@@ -77,8 +95,8 @@ const TaskListComponent = () => {
 					</div>
 				</div>
 				{/* FORM Tasks */}
-				<TaskForm></TaskForm>
 			</div>
+			<TaskForm add={addTask}></TaskForm>
 		</div>
 	);
 };
