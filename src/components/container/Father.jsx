@@ -1,13 +1,15 @@
-import React from "react";
+import React, { useState } from "react";
 import Child from "../pure/Child";
 
 const Father = () => {
-	const showMessage = (text) => {
-		alert("Message received: " + text);
+	const [name, setName] = useState();
+
+	const update = (newName) => {
+		setName(newName);
 	};
 	return (
 		<div>
-			<Child fatherFunc={showMessage}></Child>
+			<Child updateFunc={update} newName={name}></Child>
 		</div>
 	);
 };

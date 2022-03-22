@@ -1,18 +1,24 @@
 import React, { useRef } from "react";
 
-const Child = ({ fatherFunc }) => {
-	const messageRef = useRef("");
+const Child = ({ newName, updateFunc }) => {
+	const nameRef = useRef("");
 
+	const submitName = (e) => {
+		e.preventDefault();
+		updateFunc(nameRef.current.value);
+	};
 	return (
 		<div>
 			<h2>Child Component</h2>
-			<button
-				onClick={() => {
-					fatherFunc("Hello from CHILD");
-				}}
-			>
-				Button 1
-			</button>
+			{/* FATHER: Function y Name variable */}
+			{/* HIJO: Ejecuta Function y Recibe el newName de FATHER */}
+			<div style={{ marginTop: "1.5rem" }}>
+				<form onSubmit={submitName}>
+					<input type="text" placeholder="New Name" ref={nameRef} />
+					<button type="submit">Submit</button>
+				</form>
+			</div>
+			<h2>{newName}</h2>
 		</div>
 	);
 };
