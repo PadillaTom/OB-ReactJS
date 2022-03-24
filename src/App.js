@@ -4,12 +4,15 @@ import { Ejemplo1, Ejemplo2, MiComponenteConContexto, Ejemplo4 } from "./hooks";
 import TaskListComponent from "./components/container/TaskListComponent";
 import Father from "./components/container/Father";
 import { GreetingStyled } from "./components/pure";
+import OptionalRender from "./components/pure/OptionalRender";
 
 function App() {
 	return (
 		<div className="App">
-			{/* Task List */}
-			<TaskListComponent></TaskListComponent>
+			{/* :::: PROYECTO FINAL :::: */}
+			{/* <TaskListComponent></TaskListComponent> */}
+
+			{/* :::: EJEMPLOS :::: */}
 
 			{/* Ejemplo HOOKS  */}
 			{/* <Ejemplo1></Ejemplo1> */}
@@ -23,7 +26,10 @@ function App() {
 			{/* <GreetingStyled name="Tomas"></GreetingStyled> */}
 
 			{/* Father - Child */}
-			<Father></Father>
+			{/* <Father></Father> */}
+
+			{/* Conditional Rendering */}
+			<OptionalRender></OptionalRender>
 		</div>
 	);
 }
