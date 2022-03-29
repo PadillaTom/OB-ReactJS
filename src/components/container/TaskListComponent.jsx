@@ -23,7 +23,9 @@ const TaskListComponent = () => {
 	// Effect:
 	useEffect(() => {
 		console.log("Task State = Fue modificado.");
-		setLoading(false);
+		setTimeout(() => {
+			setLoading(false);
+		}, 2500);
 		return () => {
 			console.log("TaskList (CLEANUP) =  Sera UNMOUNT");
 		};
@@ -50,6 +52,51 @@ const TaskListComponent = () => {
 		setTasks(tempTasks);
 	};
 
+	const Table = () => {
+		return (
+			<table>
+				<thead>
+					<tr>
+						<th scope="col">Title</th>
+						<th scope="col">Description</th>
+						<th scope="col">Priority</th>
+						<th scope="col">Actions</th>
+					</tr>
+				</thead>
+				<tbody>
+					{/* TaskList */}
+					{tasks.map((singleTask, index) => {
+						return (
+							<TaskComponent
+								key={index}
+								task={singleTask}
+								complete={completeTask}
+								remove={deleteTask}
+							></TaskComponent>
+						);
+					})}
+				</tbody>
+			</table>
+		);
+	};
+	let taskTable;
+	if (tasks.length > 0) {
+		taskTable = <Table></Table>;
+	} else {
+		taskTable = (
+			<div>
+				<h3>There are no Tasks</h3>
+				<h4>Create a new Task</h4>
+			</div>
+		);
+	}
+	// Styles:
+	const loadingStyles = {
+		color: "cirmson",
+		fontSize: "2rem",
+		fontWeight: "bold",
+	};
+
 	// RENDER:
 	return (
 		<div>
@@ -69,34 +116,12 @@ const TaskListComponent = () => {
 						}}
 						data-mdb-perfect-scrollbar="true"
 					>
-						<table>
-							<thead>
-								<tr>
-									<th scope="col">Title</th>
-									<th scope="col">Description</th>
-									<th scope="col">Priority</th>
-									<th scope="col">Actions</th>
-								</tr>
-							</thead>
-							<tbody>
-								{/* TaskList */}
-								{tasks.map((singleTask, index) => {
-									return (
-										<TaskComponent
-											key={index}
-											task={singleTask}
-											complete={completeTask}
-											remove={deleteTask}
-										></TaskComponent>
-									);
-								})}
-							</tbody>
-						</table>
+						{loading ? <p style={loadingStyles}>Loading...</p> : taskTable}
 					</div>
 				</div>
 				{/* FORM Tasks */}
 			</div>
-			<TaskForm add={addTask}></TaskForm>
+			<TaskForm add={addTask} length={tasks.length}></TaskForm>
 		</div>
 	);
 };

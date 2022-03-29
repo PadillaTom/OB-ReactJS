@@ -10,7 +10,7 @@ function App() {
 	return (
 		<div className="App">
 			{/* :::: PROYECTO FINAL :::: */}
-			{/* <TaskListComponent></TaskListComponent> */}
+			<TaskListComponent></TaskListComponent>
 
 			{/* :::: EJEMPLOS :::: */}
 
@@ -29,7 +29,7 @@ function App() {
 			{/* <Father></Father> */}
 
 			{/* Conditional Rendering */}
-			<OptionalRender></OptionalRender>
+			{/* <OptionalRender></OptionalRender> */}
 		</div>
 	);
 }

@@ -7,3 +7,13 @@
 	cursor: pointer;
 	transition: 0.2s linear all;
 }
+
+.task-completed {
+	color: gray;
+	text-decoration: line-through;
+}
+
+.task-pending {
+	font-weight: bold;
+	color: tomato;
+}
