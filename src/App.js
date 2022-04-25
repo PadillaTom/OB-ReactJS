@@ -6,6 +6,7 @@ import Father from "./components/container/Father";
 import { GreetingStyled } from "./components/pure";
 import OptionalRender from "./components/pure/OptionalRender";
 import LoginForkmik from "./components/forms/LoginForkmik";
+import RegisterFormik from "./components/forms/RegisterFormik";
 
 function App() {
 	return (
@@ -33,7 +34,8 @@ function App() {
 			{/* <OptionalRender></OptionalRender> */}
 
 			{/* Formik y Yup */}
-			<LoginForkmik></LoginForkmik>
+			{/* <LoginForkmik></LoginForkmik> */}
+			<RegisterFormik></RegisterFormik>
 		</div>
 	);
 }
