@@ -8,10 +8,12 @@ import "./index.css";
 
 import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import AppRoutingOne from "./AppRoutingOne";
 
 ReactDOM.render(
 	<React.StrictMode>
-		<App />
+		{/* <App /> */}
+		<AppRoutingOne></AppRoutingOne>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
