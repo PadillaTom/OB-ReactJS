@@ -5,12 +5,13 @@ import TaskListComponent from "./components/container/TaskListComponent";
 import Father from "./components/container/Father";
 import { GreetingStyled } from "./components/pure";
 import OptionalRender from "./components/pure/OptionalRender";
+import LoginForkmik from "./components/forms/LoginForkmik";
 
 function App() {
 	return (
 		<div className="App">
 			{/* :::: PROYECTO FINAL :::: */}
-			<TaskListComponent></TaskListComponent>
+			{/* <TaskListComponent></TaskListComponent> */}
 
 			{/* :::: EJEMPLOS :::: */}
 
@@ -30,6 +31,9 @@ function App() {
 
 			{/* Conditional Rendering */}
 			{/* <OptionalRender></OptionalRender> */}
+
+			{/* Formik y Yup */}
+			<LoginForkmik></LoginForkmik>
 		</div>
 	);
 }
