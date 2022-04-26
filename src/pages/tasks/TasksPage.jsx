@@ -1,6 +1,6 @@
 import React from "react";
 
-import { TaskListComponent } from "../../components/container/TaskListComponent";
+import TaskListComponent from "../../components/container/TaskListComponent";
 
 const TasksPage = () => {
 	return (

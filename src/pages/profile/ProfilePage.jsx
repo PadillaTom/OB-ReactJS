@@ -16,6 +16,13 @@ const ProfilePage = () => {
 			>
 				Back
 			</button>
+			<button
+				onClick={() => {
+					nav("/tasks");
+				}}
+			>
+				Tasks
+			</button>
 		</div>
 	);
 };

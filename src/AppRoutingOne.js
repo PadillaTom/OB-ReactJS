@@ -5,6 +5,8 @@ import HomePage from "./pages/home/HomePage";
 import AboutPage from "./pages/home/AboutPage";
 import ProfilePage from "./pages/profile/ProfilePage";
 import NotFoundPage from "./pages/404/NotFoundPage";
+import TasksPage from "./pages/tasks/TasksPage";
+import TaskDetailsPage from "./pages/tasks/TaskDetailsPage";
 
 const AppRoutingOne = () => {
 	return (
@@ -20,6 +22,11 @@ const AppRoutingOne = () => {
 				<Route path="/about" element={<AboutPage></AboutPage>}></Route>
 				<Route path="/faqs" element={<AboutPage></AboutPage>}></Route>
 				<Route path="/profile" element={<ProfilePage></ProfilePage>}></Route>
+				<Route path="/tasks" element={<TasksPage></TasksPage>}></Route>
+				<Route
+					path="/task/:id"
+					element={<TaskDetailsPage></TaskDetailsPage>}
+				></Route>
 				<Route path="*" element={<NotFoundPage></NotFoundPage>}></Route>
 			</Routes>
 		</Router>
