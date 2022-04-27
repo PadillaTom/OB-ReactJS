@@ -7,6 +7,8 @@ import { GreetingStyled } from "./components/pure";
 import OptionalRender from "./components/pure/OptionalRender";
 import LoginForkmik from "./components/forms/LoginForkmik";
 import RegisterFormik from "./components/forms/RegisterFormik";
+import AsyncExample from "./components/pure/AsyncExample";
+import ObservableExample from "./components/pure/ObservableExample";
 
 function App() {
 	return (
@@ -35,7 +37,11 @@ function App() {
 
 			{/* Formik y Yup */}
 			{/* <LoginForkmik></LoginForkmik> */}
-			<RegisterFormik></RegisterFormik>
+			{/* <RegisterFormik></RegisterFormik> */}
+
+			{/* Async */}
+			{/* <AsyncExample></AsyncExample> */}
+			<ObservableExample></ObservableExample>
 		</div>
 	);
 }
