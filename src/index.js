@@ -6,14 +6,16 @@ import "bootstrap/dist/css/bootstrap.css";
 import "bootstrap-icons/font/bootstrap-icons.css";
 import "./index.css";
 
-import App from "./App";
 import reportWebVitals from "./reportWebVitals";
+import App from "./App";
 import AppRoutingOne from "./AppRoutingOne";
+import AppRoutingFinal from "./AppRoutingFinal";
 
 ReactDOM.render(
 	<React.StrictMode>
 		{/* <App /> */}
-		<AppRoutingOne></AppRoutingOne>
+		{/* <AppRoutingOne></AppRoutingOne> */}
+		<AppRoutingFinal></AppRoutingFinal>
 	</React.StrictMode>,
 	document.getElementById("root")
 );
