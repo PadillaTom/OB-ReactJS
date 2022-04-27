@@ -26,6 +26,7 @@ const FetchExample = () => {
 		<div>
 			<h2>Fetch Example</h2>
 			<h4>Users:</h4>
+			<h4>NO FUNCIONA LA API, pero vimos GET por Params, All</h4>
 			{/* {users.map((i, index) => {
 				<p key={index}>i.first_name</p>;
 			})} */}
