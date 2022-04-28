@@ -10,6 +10,7 @@ import RegisterFormik from "./components/forms/RegisterFormik";
 import AsyncExample from "./components/pure/AsyncExample";
 import ObservableExample from "./components/pure/ObservableExample";
 import FetchExample from "./components/pure/FetchExample";
+import AxiosCRUDExample from "./components/pure/AxiosCRUDExample";
 
 function App() {
 	return (
@@ -45,7 +46,10 @@ function App() {
 			{/* <ObservableExample></ObservableExample> */}
 
 			{/* Fetch */}
-			<FetchExample></FetchExample>
+			{/* <FetchExample></FetchExample> */}
+
+			{/* Axios */}
+			<AxiosCRUDExample></AxiosCRUDExample>
 		</div>
 	);
 }
