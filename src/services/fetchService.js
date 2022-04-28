@@ -9,12 +9,16 @@ export const login = async (email, password) => {
 		email,
 		password,
 	};
-	let response = await fetch("https://reqres.in/api/login", {
-		method: "POST",
-		cache: "no-cache",
-		headers: {
-			"Content-type": "application/json",
-		},
-		body,
-	});
+	let response = await fetch(
+		"https://s1-02-t-backend.herokuapp.com/auth/login",
+		{
+			method: "POST",
+			cache: "no-cache",
+			headers: {
+				"Content-type": "application/json",
+			},
+			body: body,
+		}
+	);
+	return response;
 };
